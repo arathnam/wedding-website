@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block page_title %} | Events{% endblock %}
+
+{% block more_styles %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/events.css">
+{% endblock %}
+
+{% block body %}
+    <div id="main" style="width:800px">
+        <img style="width:250px" src="{{ STATIC_URL }}img/garba.png"/>
+        <div id="events-row">
+	    <div><img style="width:250px" src="{{ STATIC_URL }}img/ceremony.png"></div>
+	    <div><img style="width:250px" src="{{ STATIC_URL }}img/reception.png"></div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+html {
+    background-image: url('../img/background.png');
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;
+    border: 20px solid rgb(51, 102, 102);
+}
+
+#main {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#main img {
+    width: 800px;
+}
+
+#footer nav {
+    text-align:center;
+    font-family:Courier New;
+    font-size:18px;
+}
+#footer nav li {
+    display:inline;
+    padding-right:35px;
+}
+#footer nav li a {
+    text-decoration: none;
+    color:rgb(77, 77, 77);
+}
+#footer nav li a:hover {
+    text-decoration:underline;
+}
+#footer nav li.active a {
+    font-weight:bold;
+}

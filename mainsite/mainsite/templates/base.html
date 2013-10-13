@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
+    <title>Jayodita and Adi {% block page_title %}{% endblock %}</title>
+    {% block more_styles %}{% endblock %}
+</head>
+
+<body>
+    {% block body %}
+    {% endblock %}
+
+    <footer id="footer">
+        <nav>
+            <ul>
+                <li class="{% ifequal request.path "/home" %}active{% endifequal %}">
+                    <a href="/home">Home</a>
+                </li>
+                <li class="{% ifequal request.path "/story" %}active{% endifequal %}">
+                    <a href="/story">Story</a>
+                </li>
+                <li class="{% ifequal request.path "/events" %}active{% endifequal %}">
+                    <a href="/events">Events</a>
+                </li>
+                <!--li class="{% ifequal request.path "/accommodations" %}active{% endifequal %}">
+                    <a href="/accommodations">Accommodations</a>
+                </li>
+                <li class="{% ifequal request.path "/rsvp" %}active{% endifequal %}">
+                    <a href="/rsvp">RSVP</a>
+                </li>
+                <li class="{% ifequal request.path "/guestbook" %}active{% endifequal %}">
+                    <a href="/guestbook">Guestbook</a>
+                </li-->
+                <li class="{% ifequal request.path "/photos" %}active{% endifequal %}">
+                    <a href="/photos">Photos</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

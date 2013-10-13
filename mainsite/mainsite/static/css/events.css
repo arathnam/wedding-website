@@ -1,0 +1,10 @@
+#events-row {
+    margin: -120px 0 0 120px;
+}
+#events-row div {
+    width:33.3%;
+    float:left;
+}
+#events-row div img {
+    float:right;
+}
