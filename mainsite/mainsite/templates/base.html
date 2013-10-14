@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/base.js"></script>
     <title>Jayodita and Adi {% block page_title %}{% endblock %}</title>
     {% block more_styles %}{% endblock %}
 </head>
@@ -10,6 +12,11 @@
 <body>
     {% block body %}
     {% endblock %}
+
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
 
     <footer id="footer">
         <nav>
@@ -31,10 +38,10 @@
                 </li>
                 <li class="{% ifequal request.path "/guestbook" %}active{% endifequal %}">
                     <a href="/guestbook">Guestbook</a>
-                </li-->
+                </li>
                 <li class="{% ifequal request.path "/photos" %}active{% endifequal %}">
                     <a href="/photos">Photos</a>
-                </li>
+                </li-->
             </ul>
         </nav>
     </footer>

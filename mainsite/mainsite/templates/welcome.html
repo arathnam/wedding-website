@@ -2,8 +2,12 @@
 
 {% block page_title %} | Welcome{% endblock %}
 
+{% block more_styles %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/welcome.css">
+{% endblock %}
+
 {% block body %}
     <div id="main">
-        <img src="{{ STATIC_URL }}img/welcome.png" alt="Click to enter our site"/>
+        <a href="/home"><img src="{{ STATIC_URL }}img/welcome.png" title="Click to enter our site"/></a>
     </div>
 {% endblock %}
