@@ -38,6 +38,7 @@ html {
 #main {
     position: absolute;
     display: inline-block;
+    margin-top: 20px;  /* To ensure there is room for the border */
 }
 
 #main img {
@@ -45,22 +46,28 @@ html {
     width: 800px;
 }
 
-#footer nav {
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 10px 0px 20px;
     text-align: center;
+}
+.footer nav {
     font-family: Courier New;
     font-size: 18px;
 }
-#footer nav li {
+.footer nav li {
     display: inline;
     padding-right: 35px;
 }
-#footer nav li a {
+.footer nav li a {
     text-decoration: none;
     color: rgb(77, 77, 77);
 }
-#footer nav li a:hover {
+.footer nav li a:hover {
     text-decoration: underline;
 }
-#footer nav li.active a {
+.footer nav li.active a {
     font-weight: bold;
 }

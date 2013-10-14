@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    {% block body %}
-    {% endblock %}
-
     <div id="left"></div>
     <div id="right"></div>
     <div id="top"></div>
     <div id="bottom"></div>
 
-    <footer id="footer">
+    {% block body %}
+    {% endblock %}
+
+    <footer class="footer">
         <nav>
             <ul>
                 <li class="{% ifequal request.path "/home" %}active{% endifequal %}">
