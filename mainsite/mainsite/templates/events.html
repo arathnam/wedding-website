@@ -7,11 +7,16 @@
 {% endblock %}
 
 {% block body %}
-    <div id="main" style="width:800px">
-        <img style="width:250px" src="{{ STATIC_URL }}img/garba.png"/>
-        <div id="events-row">
-	    <div><img style="width:250px" src="{{ STATIC_URL }}img/ceremony.png"></div>
-	    <div><img style="width:250px" src="{{ STATIC_URL }}img/reception.png"></div>
+    <div id="container">
+        <div id="events-container">
+            <div id="img-container">
+                <div><img src="{{ STATIC_URL }}img/events_garba.png"/></div>
+                <div><img src="{{ STATIC_URL }}img/events_ceremony.png"></div>
+                <div><img src="{{ STATIC_URL }}img/events_reception.png"></div>
+            </div>
+            <div id="events-text">
+                <img src="{{ STATIC_URL }}img/events_text.png">
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -1,10 +1,41 @@
-#events-row {
-    margin: -120px 0 0 120px;
+#container {
+   position: absolute;
+   top: 50%;
+   margin-top: -225px; /* half of #content height */
+   width: 100%;
 }
-#events-row div {
-    width:33.3%;
-    float:left;
+
+#events-container {
+   width: 1000px;
+   height: 450px;
+   margin-left: auto;
+   margin-right: auto;
 }
-#events-row div img {
-    float:right;
+
+#img-container {
+  text-align: justify;
+  font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
+  min-width: 800px;
+}
+
+#img-container div {
+  display: inline-block;
+}
+
+#img-container:after {
+  content: '';
+  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+
+#img-container img {
+  width: 300px;
+}
+
+#events-text {
+  text-align: right;
+}
+
+#events-text img {
+  width: 300px;
 }
