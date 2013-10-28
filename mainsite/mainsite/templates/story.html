@@ -1,3 +1,18 @@
 {% extends "base.html" %}
 
-{% block page_title %} | Story{% endblock %}
+{% block page_title %} | Events (Reception){% endblock %}
+
+{% block more_styles_and_js %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/story.css">
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <div id="top-img-container">
+            <img src="{{ STATIC_URL }}img/story_1.png"/>
+        </div>
+        <div id="bottom-img-container">
+            <img src="{{ STATIC_URL }}img/story_2.png"/>
+        </div>
+    </div>
+{% endblock %}
