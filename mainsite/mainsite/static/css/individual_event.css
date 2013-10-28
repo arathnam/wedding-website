@@ -1,0 +1,51 @@
+#container {
+    position: absolute;
+    top: 50%;
+    margin-top: -260px; /* Half of content height */
+    width: 100%;
+}
+
+#event-container {
+    width: 1000px;
+    height: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+}
+
+#img-container {
+    float: left;
+    position: relative;
+}
+
+#img-container img {
+    max-width: 550px;
+    max-height: 520px;
+    display: block;
+}
+
+#text-container {
+    margin-left: 570px;
+    font-family: Courier New;
+    font-size: 16px;
+}
+
+.text-header {
+    text-align: center;
+    padding-bottom: 1em;
+    font-weight: bold;
+}
+
+.left-column {
+    width: 25%;
+    vertical-align: top;
+}
+
+.right-column {
+    width: 75%;
+    vertical-align: top;
+}
+
+tr.padding-under > td {
+    padding-bottom: 1em;
+}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block page_title %} | Events (Ceremony){% endblock %}
+
+{% block more_styles_and_js %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/individual_event.css">
+    <script type="text/javascript" src="{{ STATIC_URL }}js/individual_event.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <div id="event-container">                
+            <div id="img-container">
+                <img id="img-container-image" src="{{ STATIC_URL }}img/ceremony.png"/>
+            </div>
+            <div id="text-container">
+                <p class="text-header teal-color">Officially getting married<br>ft.<br>a fire<br>some dancing<br>and perhaps a horse!</p>
+                <table width="100%">
+                    <tr class="padding-under">
+                        <td class="left-column orange-color">When:</td>
+                        <td class="right-column gray-color">Monday, May 26th, 2014 at 5pm</td>
+                    </tr>
+                    <tr class="padding-under">
+                        <td class="left-column orange-color">Where:</td>
+                        <td color="right-column gray-color">Casa Real<br>410 Vineyard Avenue<br>Pleasanton, CA 94566</td>
+                    </tr>
+                    <tr class="padding-under">
+                        <td class="left-column orange-color">Schedule:</td>
+                        <td color="right-column gray-color">Guest arrive at 2pm<br>Baraat (Groom's entrance) at 6pm<br>Seating at 3pm<br>Ceremony at 3:30pm</td>
+                    </tr>
+                    <tr class="padding-under">
+                        <td class="left-column orange-color">Parking:</td>
+                        <td color="right-column gray-color">Available at the venue</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

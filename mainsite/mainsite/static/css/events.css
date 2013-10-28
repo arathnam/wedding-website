@@ -1,41 +1,41 @@
 #container {
-   position: absolute;
-   top: 50%;
-   margin-top: -225px; /* half of #content height */
-   width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -225px; /* Half of content height */
+    width: 100%;
 }
 
 #events-container {
-   width: 1000px;
-   height: 450px;
-   margin-left: auto;
-   margin-right: auto;
+    width: 1000px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #img-container {
-  text-align: justify;
-  font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
-  min-width: 800px;
+    text-align: justify;
+    font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
+    min-width: 800px;
 }
 
 #img-container div {
-  display: inline-block;
+    display: inline-block;
 }
 
 #img-container:after {
-  content: '';
-  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
-  display: inline-block;
+    content: '';
+    width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+    display: inline-block;
 }
 
 #img-container img {
-  width: 300px;
+    width: 300px;
 }
 
 #events-text {
-  text-align: right;
+    text-align: right;
 }
 
 #events-text img {
-  width: 300px;
+    width: 300px;
 }
