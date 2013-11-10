@@ -1,16 +1,33 @@
 #container {
-    width: 1000px;
+    width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
 #top-img-container {
+    margin-top: 40px;
     text-align: right;
 }
 
 #top-img-container img {
     height: 300px;
     width: auto;
+}
+
+#story {
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-story-text {
+    margin-left: 40%;
+    padding-bottom: 2px;
+}
+
+.right-story-text {
+    margin-right: 40%;
+    padding-bottom: 2px;
 }
 
 #bottom-img-container {

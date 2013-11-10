@@ -1,34 +1,53 @@
 html {
     background-image: url('../img/background.png');
     height: 100%;
-    overflow: hidden;
+    font-family: Courier New;
+}
+
+body {
+    height: 100%;
 }
 
 #top, #bottom, #left, #right {
     background: rgb(51, 102, 102);
     position: fixed;
 }
+
 #left, #right {
     top: 0;
     bottom: 0;
     width: 20px;
 }
+
 #left {
     left: 0;
 }
+
 #right {
     right: 0;
 }
+
 #top, #bottom {
     left: 0;
     right: 0;
     height: 20px;
 }
+
 #top {
     top: 0;
 }
+
 #bottom {
     bottom: 0;
+}
+
+#base-container {
+    min-height: 100%;
+    position: relative;
+}
+
+#base-body {
+    padding-bottom: 90px;
 }
 
 #main {
@@ -43,14 +62,13 @@ html {
 }
 
 .footer {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    bottom: 0px;
-    padding: 10px 0px 20px;
+    height: 90px;
+    bottom: 0;
     text-align: center;
 }
 .footer nav {
-    font-family: Courier New;
     font-size: 18px;
 }
 .footer nav li {
@@ -69,11 +87,11 @@ html {
 }
 
 .teal-color {
-    color: rgb(51, 102, 102);
+    color: #336666;
 }
 .orange-color {
-    color: rgb(241, 90, 36);
+    color: #F15A24;
 }
 .gray-color {
-    color: rgb(77, 77, 77);
+    color: #4D4D4D;
 }

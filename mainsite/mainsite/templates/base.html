@@ -15,36 +15,40 @@
     <div id="top"></div>
     <div id="bottom"></div>
 
-    {% block body %}
-    {% endblock %}
+    <div id="base-container">
+        <div id="base-body">
+            {% block body %}
+            {% endblock %}
+        </div>
 
-    <footer class="footer">
-        <nav>
-            <ul>
-                <li class="{% ifequal request.path "/home" %}active{% endifequal %}">
-                    <a href="/home">Home</a>
-                </li>
-                <li class="{% ifequal request.path "/story" %}active{% endifequal %}">
-                    <a href="/story">Story</a>
-                </li>
-                <li class="{% ifequal request.path "/events" %}active{% endifequal %}">
-                    <a href="/events">Events</a>
-                </li>
-                <!--li class="{% ifequal request.path "/accommodations" %}active{% endifequal %}">
-                    <a href="/accommodations">Accommodations</a>
-                </li>
-                <li class="{% ifequal request.path "/rsvp" %}active{% endifequal %}">
-                    <a href="/rsvp">RSVP</a>
-                </li>
-                <li class="{% ifequal request.path "/guestbook" %}active{% endifequal %}">
-                    <a href="/guestbook">Guestbook</a>
-                </li>
-                <li class="{% ifequal request.path "/photos" %}active{% endifequal %}">
-                    <a href="/photos">Photos</a>
-                </li-->
-            </ul>
-        </nav>
-    </footer>
+        <footer class="footer">
+            <nav>
+                <ul>
+                    <li class="{% ifequal request.path "/home" %}active{% endifequal %}">
+                        <a href="/home">Home</a>
+                    </li>
+                    <li class="{% ifequal request.path "/story" %}active{% endifequal %}">
+                        <a href="/story">Story</a>
+                    </li>
+                    <li class="{% ifequal request.path "/events" %}active{% endifequal %}">
+                        <a href="/events">Events</a>
+                    </li>
+                    <!--li class="{% ifequal request.path "/accommodations" %}active{% endifequal %}">
+                        <a href="/accommodations">Accommodations</a>
+                    </li>
+                    <li class="{% ifequal request.path "/rsvp" %}active{% endifequal %}">
+                        <a href="/rsvp">RSVP</a>
+                    </li>
+                    <li class="{% ifequal request.path "/guestbook" %}active{% endifequal %}">
+                        <a href="/guestbook">Guestbook</a>
+                    </li>
+                    <li class="{% ifequal request.path "/photos" %}active{% endifequal %}">
+                        <a href="/photos">Photos</a>
+                    </li-->
+                </ul>
+            </nav>
+        </footer>
+    </div>
 </body>
 
 </html>
