@@ -1,0 +1,22 @@
+{% extends "templates/base.html" %}
+
+{% block page_title %} | Events{% endblock %}
+
+{% block more_styles_and_js %}
+    <link rel="stylesheet" href="/css/events.css">
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <div id="events-container">
+            <div id="img-container">
+                <div><a href="/garba"><img src="/img/events_garba.png"/></a></div>
+                <div><a href="/ceremony"><img src="/img/events_ceremony.png"></a></div>
+                <div><a href="/reception"><img src="/img/events_reception.png"></a></div>
+            </div>
+            <div id="events-text">
+                <img src="/img/events_text.png">
+            </div>
+        </div>
+    </div>
+{% endblock %}

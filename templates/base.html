@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+    <link rel="stylesheet" href="css/base.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <title>Jayodita and Adi {% block page_title %}{% endblock %}</title>
+    {% block more_styles_and_js %}{% endblock %}
+</head>
+
+<body>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+
+    <div id="base-container-wrapper">
+        <div id="base-container">
+            <div id="base-body">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+
+        {% set navigation_bar = [
+            ('/', 'home', 'Home'),
+            ('/story', 'story', 'Story'),
+            ('/events', 'events', 'Events')
+        ] -%}
+        {% set active_page = active_page|default('index') -%}
+        <footer class="footer">
+            <nav>
+                <ul>
+                    {% for href, id, caption in navigation_bar %}
+                        <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,15 +1,15 @@
-{% extends "base.html" %}
+{% extends "templates/base.html" %}
 
 {% block page_title %} | Events (Reception){% endblock %}
 
 {% block more_styles_and_js %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/story.css">
+    <link rel="stylesheet" href="/css/story.css">
 {% endblock %}
 
 {% block body %}
     <div id="container">
         <div id="top-img-container">
-            <img src="{{ STATIC_URL }}img/story_1.png"/>
+            <img src="/img/story_1.png"/>
         </div>
         <div id="story">
             <div class="left-story-text teal-color">
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div id="bottom-img-container">
-            <img src="{{ STATIC_URL }}img/story_2.png"/>
+            <img src="/img/story_2.png"/>
         </div>
     </div>
 {% endblock %}

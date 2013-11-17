@@ -1,17 +1,17 @@
-{% extends "base.html" %}
+{% extends "templates/base.html" %}
 
 {% block page_title %} | Events (Garba){% endblock %}
 
 {% block more_styles_and_js %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/individual_event.css">
-    <script type="text/javascript" src="{{ STATIC_URL }}js/individual_event.js"></script>
+    <link rel="stylesheet" href="/css/individual_event.css">
+    <script type="text/javascript" src="/js/individual_event.js"></script>
 {% endblock %}
 
 {% block body %}
     <div id="container">
-        <div id="event-container">                
+        <div id="event-container">
             <div id="img-container">
-                <img id="img-container-image" src="{{ STATIC_URL }}img/garba.png"/>
+                <img id="img-container-image" src="/img/garba.png"/>
             </div>
             <div id="text-container">
                 <p class="text-header teal-color">Live music,<br>a few simple steps,<br>good ole time for EVERYONE!</p>
