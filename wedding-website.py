@@ -30,6 +30,10 @@ class CeremonyPage(webapp2.RequestHandler):
 class ReceptionPage(webapp2.RequestHandler):
     def get(self):
         self.response.write(JINJA_ENVIRONMENT.get_template('templates/reception.html').render())
+        
+class GuestBookPage(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(JINJA_ENVIRONMENT.get_template('templates/guest_book.html').render())
 
 application = webapp2.WSGIApplication([
     ('/', WelcomePage),
@@ -39,6 +43,7 @@ application = webapp2.WSGIApplication([
     ('/garba', GarbaPage),
     ('/ceremony', CeremonyPage),
     ('/reception', ReceptionPage),
+    ('/guest_book', GuestBookPage),
 ], debug=True)
 
 JINJA_ENVIRONMENT = jinja2.Environment(

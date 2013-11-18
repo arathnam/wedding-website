@@ -1,0 +1,40 @@
+{% extends "templates/base.html" %}
+
+{% block page_title %} | Guest Book{% endblock %}
+
+{% block more_styles_and_js %}
+    <link rel="stylesheet" href="/css/guest_book.css">
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <div id="top-img-container">
+            <img src="/img/guestbook_elephant.png"/>
+        </div>
+    </div>
+
+
+    <div id="comments-container">
+        <!-- START: Livefyre Embed -->
+        <div id="livefyre-comments"></div>
+        <script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+        <script type="text/javascript">
+        (function () {
+            var articleId = fyre.conv.load.makeArticleId(null);
+            fyre.conv.load({}, [{
+                el: 'livefyre-comments',
+                network: "livefyre.com",
+                siteId: "347919",
+                articleId: articleId,
+                signed: false,
+                collectionMeta: {
+                    articleId: articleId,
+                    url: fyre.conv.load.makeCollectionUrl(),
+                }
+            }], function() {});
+        }());
+        </script>
+        <!-- END: Livefyre Embed -->
+    </div>
+
+{% endblock %}
