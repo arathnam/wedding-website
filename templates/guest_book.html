@@ -1,4 +1,5 @@
 {% extends "templates/base.html" %}
+{% set active_page = "guest_book" %}
 
 {% block page_title %} | Guest Book{% endblock %}
 
@@ -15,26 +16,14 @@
 
 
     <div id="comments-container">
-        <!-- START: Livefyre Embed -->
-        <div id="livefyre-comments"></div>
-        <script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
-        <script type="text/javascript">
-        (function () {
-            var articleId = fyre.conv.load.makeArticleId(null);
-            fyre.conv.load({}, [{
-                el: 'livefyre-comments',
-                network: "livefyre.com",
-                siteId: "347919",
-                articleId: articleId,
-                signed: false,
-                collectionMeta: {
-                    articleId: articleId,
-                    url: fyre.conv.load.makeCollectionUrl(),
-                }
-            }], function() {});
-        }());
-        </script>
-        <!-- END: Livefyre Embed -->
+        <!-- begin htmlcommentbox.com -->
+         <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
+         <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+         <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=(hcb_user.PAGE || ""+window.location), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24W1kXhv3r244XyPhiIe3XY1"+"&opts=16790&num=10");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+        <!-- end htmlcommentbox.com -->
+        
     </div>
+
+
 
 {% endblock %}

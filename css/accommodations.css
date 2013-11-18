@@ -1,0 +1,43 @@
+#top-img-container {
+    margin-top: 40px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+#top-img-container img {
+    height: 80px;
+    width: auto;
+}
+
+#accommodations-text {
+    font-weight: 600;
+    text-align: left;
+}
+
+.left-accommodations-text1 {
+    margin-left: 60px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.left-accommodations-text2 {
+    margin-left: 70px;
+    margin-top: -10px;
+    padding-top: 0px;
+}
+
+#right-img-container {
+    margin-top: -50px;
+    margin-left: 60%;
+    text-align: left;
+}
+
+#right-img-container img {
+    height: 300px;
+    width: auto;
+}
+
+.right-accommodations-text {
+    font-weight: 600;
+    line-height: 0.60em;
+}

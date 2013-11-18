@@ -1,0 +1,35 @@
+{% extends "templates/base.html" %}
+{% set active_page = "accommodations" %}
+
+{% block page_title %} | Accommodations{% endblock %}
+
+{% block more_styles_and_js %}
+    <link rel="stylesheet" href="/css/accommodations.css">
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <div id="top-img-container">
+            <img src="/img/accommodations_text.png"/>
+        </div>
+    </div>
+
+    <div id="accommodations-text">
+        <div class="left-accommodations-text1 teal-color">
+            <p>Hotel blocks:</p>
+        </div>
+        <div class="left-accommodations-text2 gray-color">
+            <p>Coming soon!</p>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="right-img-container">
+            <img src="/img/accomodations_map.png"/>
+            <p class="right-accommodations-text orange-color"> &hearts; <span class="right-accommodations-text gray-color"> Casa Real (wedding/reception) </span> </p>
+            <p class="right-accommodations-text orange-color"> &#9733; <span class="right-accommodations-text gray-color"> Jain Temple (garba) </span> </p>
+        </div>
+    </div>
+
+
+{% endblock %}
