@@ -114,3 +114,9 @@ html, body {
     max-width: 100%;
     height: auto;
 }
+
+.shadowed {
+    -webkit-box-shadow: 0 1px 15px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 1px 15px rgba(0,0,0,0.6);
+    box-shadow: 0 1px 15px rgba(0,0,0,0.6);
+}
