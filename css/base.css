@@ -86,7 +86,7 @@ html, body {
 }
 
 #footer nav li.active a {
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 .teal-color {
