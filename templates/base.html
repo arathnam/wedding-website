@@ -15,14 +15,15 @@
     <div id="top"></div>
     <div id="bottom"></div>
 
-    <div id="base-container-wrapper">
-        <div id="base-container">
-            <div id="base-body">
-                {% block body %}
-                {% endblock %}
-            </div>
+    <div id="base-container">
+        <div id="base-body">
+            {% block body %}
+            {% endblock %}
         </div>
+    </div>
 
+    <div id="footer-container">
+        <div id="footer">
         {% set navigation_bar = [
             ('/home', 'home', 'Home'),
             ('/story', 'story', 'Story'),
@@ -32,7 +33,6 @@
             ('/guest_book', 'guest_book', 'Guest Book')
         ] -%}
         {% set active_page = active_page|default('home') -%}
-        <footer class="footer">
             <nav>
                 <ul>
                     {% for href, id, caption in navigation_bar %}
@@ -40,7 +40,7 @@
                     {% endfor %}
                 </ul>
             </nav>
-        </footer>
+        </div>
     </div>
 </body>
 

@@ -1,20 +1,20 @@
 html, body {
     background-image: url('/img/background.jpg');
-    height: 100%;
-    width: 100%;
     margin: 0;
+    padding: 0;
     font-family: Courier New;
 }
 
 #top, #bottom, #left, #right {
-    background: rgb(51, 102, 102);
+    background: #0B5460;
     position: fixed;
+    z-index: 100;
 }
 
 #left, #right {
     top: 0;
     bottom: 0;
-    width: 20px;
+    width: 10px;
 }
 
 #left {
@@ -28,7 +28,7 @@ html, body {
 #top, #bottom {
     left: 0;
     right: 0;
-    height: 20px;
+    height: 10px;
 }
 
 #top {
@@ -39,52 +39,64 @@ html, body {
     bottom: 0;
 }
 
-#base-container-wrapper {
-    padding: 20px;  /* To match the bounding box */
-    display: table;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
-
 #base-container {
-    display: table-row;
-    height: 100%;
+    width: 100%;
+    margin-bottom: 70px; /* To match page borders + height of footer */
 }
 
 #base-body {
-    height: 100%;
     overflow: auto;
+    margin: 10px; /* To match page borders */
 }
 
-.footer {
-    display: table-row;
+/* Make Footer Sticky */
+#footer-container {
+    background-image: url('/img/background.jpg');
+    bottom: 10px; /* To match page borders */
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding-bottom: 15px;
+    text-align: center;
 }
 
-.footer nav {
+#footer {
+    margin-left: 10px; /* To match page borders */
+    margin-right: 10px; /* To match page borders */
+    line-height: 60px;
+}
+
+#footer nav {
     font-size: 18px;
 }
-.footer nav li {
+
+#footer nav li {
     display: inline;
     padding-right: 35px;
 }
-.footer nav li a {
+
+#footer nav li a {
     text-decoration: none;
     color: rgb(77, 77, 77);
 }
-.footer nav li a:hover {
+
+#footer nav li a:hover {
     text-decoration: underline;
 }
-.footer nav li.active a {
+
+#footer nav li.active a {
     font-weight: bold;
 }
 
 .teal-color {
-    color: #336666;
+    color: #0B5460;
 }
+
 .orange-color {
     color: #F15A24;
 }
+
 .gray-color {
     color: #4D4D4D;
 }
@@ -92,10 +104,13 @@ html, body {
 #main {
     position: absolute;
     display: inline-block;
-    margin-top: 20px;  /* To ensure there is room for the border */
+    width: 800px;
+    max-width: 100%;
+    margin-top: 10px;  /* To ensure there is room for the border */
 }
 
 #main img {
     visibility: hidden;
-    width: 800px;
+    max-width: 100%;
+    height: auto;
 }
