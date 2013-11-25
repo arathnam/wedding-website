@@ -1,17 +1,15 @@
 #top-img-container {
     margin-top: 40px;
-    margin-left: 40px;
     text-align: left;
 }
 
 #top-img-container img {
     height: 200px;
     width: auto;
+    visibility: visible;
 }
 
 #comments-container {
     margin-top: 40px;
-    margin-left: 100px;
-    width: 1000px;
     text-align: left;
 }
