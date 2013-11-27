@@ -1,6 +1,19 @@
+#container {
+    position: absolute;
+    top: 50%;
+    margin-top: -260px; /* Half of content height */
+    width: 100%;
+}
+
+#event-container {
+    width: 1000px;
+    height: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+}
+
 #top-img-container {
-    margin-top: 40px;
-    margin-left: 40px;
     text-align: left;
 }
 

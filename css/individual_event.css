@@ -20,8 +20,9 @@
 
 #img-container img {
     max-width: 550px;
-    max-height: 520px;
+    max-height: 490px;
     display: block;
+    margin: 15px;
 }
 
 #text-container {
@@ -38,13 +39,15 @@
 .left-column {
     width: 25%;
     vertical-align: top;
+    font-weight: 600;
 }
 
 .right-column {
     width: 75%;
     vertical-align: top;
+    font-weight: 600;
 }
 
 tr.padding-under > td {
-    padding-bottom: 1em;
+    padding-bottom: 0.8em;
 }

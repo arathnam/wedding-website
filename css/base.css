@@ -53,7 +53,7 @@ html, body {
 #footer-container {
     background-image: url('/img/background.jpg');
     bottom: 10px; /* To match page borders */
-    height: 60px;
+    height: 40px;
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -64,7 +64,7 @@ html, body {
 #footer {
     margin-left: 10px; /* To match page borders */
     margin-right: 10px; /* To match page borders */
-    line-height: 60px;
+    line-height: 40px;
 }
 
 #footer nav {
