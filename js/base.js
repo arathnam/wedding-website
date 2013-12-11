@@ -1,5 +1,6 @@
 window.onload = function() {
     resize();
+    document.getElementById('hide-till-load').style.display = 'none'; 
 }
 
 $(window).resize(function() {
@@ -17,6 +18,19 @@ function resize() {
             left: ($(window).width() - $('#main').outerWidth())/2,
             top: ($(window).height() - $('#main').outerHeight())/2
         });
+    }
+
+    // HACK: For the individual event pages.
+    if ($('#event-container').length) {
+        if ($('.shadowed').length) {
+            $('#img-container').css({
+                top: ($('#event-container').height() - $('.img-container-image').height() - 30) / 2
+            });
+        } else {
+            $('#img-container').css({
+                top: ($('#event-container').height() - $('.img-container-image').height()) / 2
+            });
+        }
     }
 }
 

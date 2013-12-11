@@ -15,6 +15,10 @@
     <div id="top"></div>
     <div id="bottom"></div>
 
+    <div style="display: none" id="hide-till-load">&nbsp;</div>
+    <script type="text/javascript">
+        document.getElementById("hide-till-load").style.display = "block";
+    </script>
     <div id="base-container">
         <div id="base-body">
             {% block body %}
