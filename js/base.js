@@ -1,5 +1,8 @@
 window.onload = function() {
     resize();
+    if ($('#loading-icon').length) {
+        $('#loading-icon').hide();
+    }
     document.getElementById('hide-till-load').style.display = 'none'; 
 }
 
