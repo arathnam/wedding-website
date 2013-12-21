@@ -39,8 +39,34 @@
     padding-top: 0px;
 }
 
+.left-accommodations-text2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.left-accommodations-text2 a:hover {
+    text-decoration: underline;
+}
+
+
+.left-column {
+    width: 25%;
+    vertical-align: top;
+    font-weight: 600;
+}
+
+.right-column {
+    width: 75%;
+    vertical-align: top;
+    font-weight: 600;
+}
+
+tr.padding-under > td {
+    padding-bottom: 0.1em;
+}
+
 #right-img-container {
-    margin-top: -50px;
+    margin-top: -300px;
     margin-left: 60%;
     text-align: left;
 }
