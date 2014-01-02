@@ -1,15 +1,36 @@
+#container {
+    position: absolute;
+    top: 50%;
+    margin-top: -260px; /* Half of content height */
+    width: 100%;
+}
+
+#gb-container {
+    width: 1000px;
+    height: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+}
+
 #top-img-container {
-    margin-top: 40px;
     text-align: left;
+    position: fixed;
 }
 
 #top-img-container img {
-    height: 200px;
+    height: 175px;
     width: auto;
     visibility: visible;
 }
 
 #comments-container {
-    margin-top: 40px;
+    margin-top: 180px;
+    width: 1000px;
+    height: 340px;
     text-align: left;
+    position: relative;
+    overflow-y: auto;
 }
+
+
