@@ -69,6 +69,7 @@ html, body {
     z-index: 100;
     padding-bottom: 15px;
     text-align: center;
+    overflow-x: auto;
 }
 
 #footer {
