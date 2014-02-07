@@ -1,3 +1,14 @@
-{% extends "base.html" %}
+{% extends "templates/base.html" %}
 
 {% block page_title %} | RSVP{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <div id="rsvp-table-container"/>
+            <form action="{{ fill_out_rsvp_page_path }}" method="post">
+                <div><input type="text" name="group_name" placeholder="Enter your group name..." cols="100"></div>
+                <div><input type="submit" value="Fill Out RSVP"></div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

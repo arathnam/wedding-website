@@ -1,0 +1,31 @@
+{% extends "templates/base.html" %}
+
+{% block page_title %} | RSVP{% endblock %}
+
+{% block more_styles_and_js %}
+    <script type="text/javascript" src="js/rsvp.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div id="container">
+        <div id="rsvp-table-container"/>
+            <table>
+                <tr class="teal-color">
+                    <td></td>
+                    <td>Garba<br>5.25.14 at 6pm</td>
+                    <td>Ceremony<br>5.26.14 at 2pm</td>
+                    <td>Reception<br>5.26.14 at 5pm</td>
+                </tr>
+                {% for group_member in group_members %}
+                    <tr>
+                        <td class="orange-color">{{ group_member.first_name }} {{ group_member.last_name }}</td>
+                        <td><input type="checkbox" name="attending_garba" value=""></td>
+                        <td><input type="checkbox" name="attending_ceremony" value=""></td>
+                        <td><input type="checkbox" name="attending_reception" value=""></td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+{% endblock %}
