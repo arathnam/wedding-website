@@ -1,14 +1,26 @@
 {% extends "templates/base.html" %}
-
+<!--{% set active_page = "rsvp" %}-->
 {% block page_title %} | RSVP{% endblock %}
+
+{% block more_styles_and_js %}
+    <link rel="stylesheet" href="/css/rsvp.css">
+{% endblock %}
 
 {% block body %}
     <div id="container">
-        <div id="rsvp-table-container"/>
-            <form action="{{ fill_out_rsvp_page_path }}" method="post">
-                <div><input type="text" name="group_name" placeholder="Enter your group name..." cols="100"></div>
-                <div><input type="submit" value="Fill Out RSVP"></div>
-            </form>
+        <div id="rsvp-container">
+            <div id="top-img-container">
+                <img src="/img/rsvp_elephant.png"/>
+            </div>
+            <div id="rsvp-table-container"/>
+                <form action="{{ fill_out_rsvp_page_path }}" method="post">
+                    <div><input type="text" style="font-size:16px; font-family: Courier New; width:300px; height:30px;" name="group_name" placeholder="Please enter your login ID..." cols="300"></div>
+                    <div><input type="submit" style="font-size:16px; color:#0B5460; font-weight:bold; font-family: Courier New; width:85px; height:25px;" value="Next >"></div>
+                </form>
+            </div>
+            <div id="text-container">
+                <p class="teal-color" style="font-weight:bold"> Please RSVP by April 6th. We hope to see you there! </p>
+            </div>
         </div>
     </div>
 {% endblock %}
