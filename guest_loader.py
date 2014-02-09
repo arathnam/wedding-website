@@ -9,9 +9,9 @@ class GuestLoader(bulkloader.Loader):
                                    [('last_name', lambda x: x.decode('utf-8')),
                                     ('first_name', lambda x: x.decode('utf-8')),
                                     ('group_name', lambda x: x.decode('utf-8')),
-                                    ('attending_garba', int),
-                                    ('attending_ceremony', int),
-                                    ('attending_reception', int),
+                                    ('garba', int),
+                                    ('ceremony', int),
+                                    ('reception', int),
                                    ])
 
 loaders = [GuestLoader]

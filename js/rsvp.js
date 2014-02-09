@@ -1,12 +1,32 @@
 var rsvp_table;
 
 $(document).ready(function() {
-    $('#rsvp-table-container').submit( function() {
-        var rsvp_data = $('input', rsvp_table.fnGetNodes()).serialize();
-        alert("The following data would have been submitted to the server: \n\n" + rsvp_data);
+    $('#rsvp-form').submit( function() {
+        var group_name = document.getElementById("group_name").value;
+        var submit_rsvp_page_path = document.getElementById("submit_rsvp_page_path").value;
+        var rsvp_data = $("input", rsvp_table.fnGetNodes()).serialize();
+        if (rsvp_data.length > 0) {
+           rsvp_data = rsvp_data.concat("&group_name=" + group_name);
+        } else {
+           rsvp_data = "group_name=" + group_name;
+        }
+
+        $.ajax({
+            url: submit_rsvp_page_path,
+            type: "POST",
+            data: rsvp_data,
+            dataType: 'json',
+            success: function(data) {
+            },
+            error: function(data) {
+            }
+        });
         return false;
     });
 
-    rsvp_table = $('#rsvp-table-container').dataTable();
+    rsvp_table = $("#rsvp-table").dataTable( { "bPaginate": false,
+                                               "bFilter": false,
+                                               "bSort": false,
+                                               "bInfo": false } );
 }
 );
