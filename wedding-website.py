@@ -56,7 +56,7 @@ class RSVPPage(webapp2.RequestHandler):
         
 class RSVPThankyouPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write(JINJA_ENVIRONMENT.get_template('templates/rsvp-thankyou.html').render())
+        self.response.write(JINJA_ENVIRONMENT.get_template('templates/rsvp_thank_you.html').render())
 
 class GuestState:
     NOT_INVITED, INVITED, NOT_ATTENDING, ATTENDING = range(4)
@@ -65,7 +65,7 @@ class FillOutRSVPPage(webapp2.RequestHandler):
     def post(self):
         group_name = cgi.escape(self.request.get('group_name'))
         group_name = group_name.lower()
-        group_members = db.GqlQuery("SELECT * FROM Guest WHERE group_name = :1", group_name)
+        group_members = db.GqlQuery("SELECT * FROM Guest WHERE group_name = :1 order by first_name", group_name)
         template_values = {'submit_rsvp_page_path' : '/submitrsvp',
                            'group_name' : group_name,
                            'group_members' : group_members,
@@ -128,7 +128,7 @@ application = webapp2.WSGIApplication([
     ('/rsvp', RSVPPage),
     ('/filloutrsvp', FillOutRSVPPage),
     ('/submitrsvp', SubmitRSVPPage),
-    ('/rsvp-thankyou', RSVPThankyouPage)
+    ('/thankyou', RSVPThankyouPage)
 ], debug=True)
 
 JINJA_ENVIRONMENT = jinja2.Environment(
