@@ -53,6 +53,10 @@ class RSVPPage(webapp2.RequestHandler):
     def get(self):
         template_values = {'fill_out_rsvp_page_path' : '/filloutrsvp'}
         self.response.write(JINJA_ENVIRONMENT.get_template('templates/rsvp.html').render(template_values))
+        
+class RSVPThankyouPage(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(JINJA_ENVIRONMENT.get_template('templates/rsvp-thankyou.html').render())
 
 class GuestState:
     NOT_INVITED, INVITED, NOT_ATTENDING, ATTENDING = range(4)
@@ -118,6 +122,7 @@ application = webapp2.WSGIApplication([
     ('/rsvp', RSVPPage),
     ('/filloutrsvp', FillOutRSVPPage),
     ('/submitrsvp', SubmitRSVPPage),
+    ('/rsvp-thankyou', RSVPThankyouPage)
 ], debug=True)
 
 JINJA_ENVIRONMENT = jinja2.Environment(
