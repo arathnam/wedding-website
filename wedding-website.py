@@ -60,6 +60,7 @@ class GuestState:
 class FillOutRSVPPage(webapp2.RequestHandler):
     def post(self):
         group_name = cgi.escape(self.request.get('group_name'))
+        group_name = group_name.lower()
         group_members = db.GqlQuery("SELECT * FROM Guest WHERE group_name = :1", group_name)
         template_values = {'submit_rsvp_page_path' : '/submitrsvp',
                            'group_name' : group_name,
