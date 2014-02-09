@@ -67,6 +67,7 @@ class FillOutRSVPPage(webapp2.RequestHandler):
         group_name = group_name.lower()
         group_members = db.GqlQuery("SELECT * FROM Guest WHERE group_name = :1 order by first_name", group_name)
         template_values = {'submit_rsvp_page_path' : '/submitrsvp',
+                           'thank_you_page_path' : '/thankyou',
                            'group_name' : group_name,
                            'group_members' : group_members,
                            'STATE_NOT_INVITED' : GuestState.NOT_INVITED,

@@ -48,48 +48,48 @@
 
                                     <!-- Garba -->
                                     {% if group_member.garba > STATE_NOT_INVITED %}
-                                        <td>
+                                        <td style="color:#4D4D4D;">
                                             {% if group_member.garba == STATE_ATTENDING %}
-                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}" checked><label for="garba_{{ group_member.key().id() }}" style="color:#4D4D4D;">Yes</label>
-                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING}}"><label for="garba_{{ group_member.key().id() }}" style="color:#4D4D4D;">No</label>
+                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}" checked>Yes
+                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING}}">No
                                             {% elif group_member.garba == STATE_NOT_ATTENDING %}
-                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}"><label for="garba_{{ group_member.key().id() }}" style="color:#4D4D4D;">Yes</label>
-                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}" checked><label for="garba_{{ group_member.key().id() }}" style="color:#4D4D4D;">No</label>
+                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}">Yes
+                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}" checked>No
                                             {% else %}
-                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}"><label for="garba_{{ group_member.key().id() }}" style="color:#4D4D4D;">Yes</label>
-                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}"><label for="garba_{{ group_member.key().id() }}" style="color:#4D4D4D;">Yes</label>
+                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}">Yes
+                                                <input type="radio" name="garba_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}">No
                                             {% endif %}
                                         </td>
                                     {% endif %}
 
                                     <!-- Ceremony -->
                                     {% if group_member.ceremony > STATE_NOT_INVITED %}
-                                        <td>
+                                        <td style="color:#4D4D4D;">
                                             {% if group_member.ceremony == STATE_ATTENDING %}
-                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}" checked><label for="ceremony_{{ group_member.key().id() }}" style="color:#4D4D4D;">Yes</label>
-                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING}}"><label for="ceremony_{{ group_member.key().id() }}" style="color:#4D4D4D;">No</label>
+                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}" checked>Yes
+                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING}}">No
                                             {% elif group_member.ceremony == STATE_NOT_ATTENDING %}
-                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}"><label for="ceremony_{{ group_member.key().id() }}" style="color:#4D4D4D;">Yes</label>
-                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}" checked><label for="ceremony_{{ group_member.key().id() }}" style="color:#4D4D4D;">No</label>
+                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}">Yes
+                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}" checked>No
                                             {% else %}
-                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}"><label for="ceremony_{{ group_member.key().id() }}" style="color:#4D4D4D;">Yes</label>
-                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}"><label for="ceremony_{{ group_member.key().id() }}" style="color:#4D4D4D;">No</label>
+                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}">Yes
+                                                <input type="radio" name="ceremony_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}">No
                                             {% endif %}
                                         </td>
                                     {% endif %}
 
                                     <!-- Reception -->
                                     {% if group_member.reception > STATE_NOT_INVITED %}
-                                        <td>
+                                        <td style="color:#4D4D4D;">
                                             {% if group_member.reception == STATE_ATTENDING %}
-                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}" checked><label for="reception_{{ group_member.key().id() }}" style="color:#4D4D4D;">Yes</label>
-                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING}}"><label for="reception_{{ group_member.key().id() }}" style="color:#4D4D4D;">No</label>
+                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}" checked>Yes
+                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING}}">No
                                             {% elif group_member.reception == STATE_NOT_ATTENDING %}
-                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}"><label for="reception_{{ group_member.key().id() }}" style="color:#4D4D4D;">Yes</label>
-                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}" checked><label for="reception_{{ group_member.key().id() }}" style="color:#4D4D4D;">No</label>
+                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}">Yes
+                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}" checked>No
                                             {% else %}
-                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}"><label for="reception_{{ group_member.key().id() }}" style="color:#4D4D4D;">Yes</label>
-                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}"><label for="reception_{{ group_member.key().id() }}" style="color:#4D4D4D;">No</label>
+                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_ATTENDING }}">Yes
+                                                <input type="radio" name="reception_{{ group_member.key().id() }}" value="{{ STATE_NOT_ATTENDING }}">No
                                             {% endif %}
                                         </td>
                                     {% endif %}
@@ -100,6 +100,7 @@
                     <!-- Hacky way of doing things -->
                     <input type=hidden id="group_name" value="{{ group_name }}"/>
                     <input type=hidden id="submit_rsvp_page_path" value="{{ submit_rsvp_page_path }}"/>
+                    <input type=hidden id="thank_you_page_path" value="{{ thank_you_page_path }}"/>
                     <!-- End of hacky way of doing things -->
                     <p> <br> </p>
                     <button type="submit" style="font-size:14px; font-family:courier new; color:#0B5460; font-weight:bold; width:80px; height:25px;">Submit</button>
