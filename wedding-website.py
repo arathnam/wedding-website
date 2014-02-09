@@ -85,10 +85,15 @@ class SubmitRSVPPage(webapp2.RequestHandler):
             success_response = json.dumps({'success' : '1'})
             self.response.out.write(success_response)
 
-	group_members = db.GqlQuery("SELECT * FROM Guest WHERE group_name = :1", group_name)
+	group_members = db.GqlQuery('SELECT * FROM Guest WHERE group_name = :1', group_name)
 
         for group_member in group_members:
             key_identifier = group_member.key().id()
+
+            filled_out_name_key = 'filled_out_name_' + str(key_identifier)
+            filled_out_name = cgi.escape(self.request.get(filled_out_name_key)) if self.request.get(filled_out_name_key) else None
+            if filled_out_name:
+                group_member.filled_out_name = filled_out_name
 
             garba_key = 'garba_' + str(key_identifier)
             garba_response = cgi.escape(self.request.get(garba_key)) if self.request.get(garba_key) else None
