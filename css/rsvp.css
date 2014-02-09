@@ -13,6 +13,15 @@
     overflow: auto;
 }
 
+#rsvp-fill-container {
+    width: 1000px;
+    height: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    text-align: center;
+}
+
 #top-img-container {
     text-align: left;
     margin-top: 0px;
