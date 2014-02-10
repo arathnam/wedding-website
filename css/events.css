@@ -13,9 +13,8 @@
 }
 
 #img-container {
-    text-align: justify;
+    text-align: center;
     font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
-    min-width: 1000px;
 }
 
 #img-container div {
@@ -30,6 +29,8 @@
 
 #img-container img {
     width: 300px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #events-text {

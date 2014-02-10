@@ -6,12 +6,22 @@ import json
 import logging
 import webapp2
 
+from google.appengine.api import app_identity
+from google.appengine.api import mail
 from google.appengine.ext import db
+from google.appengine.ext import deferred
 from models import Guest
 
 SHOW_GARBA_EVENT = 1
 SHOW_CEREMONY_EVENT = 1
 SHOW_RECEPTION_EVENT = 1
+
+if (app_identity.get_application_id() == 'adiandjayodita'):
+    SHOW_GARBA_EVENT = 0
+if (app_identity.get_application_id() == 'adityawedsjayodita'):
+    SHOW_GARBA_EVENT = 0
+    SHOW_CEREMONY_EVENT = 0
+
 event_template_values = {'SHOW_GARBA_EVENT' : SHOW_GARBA_EVENT,
                          'SHOW_CEREMONY_EVENT' : SHOW_CEREMONY_EVENT,
                          'SHOW_RECEPTION_EVENT' : SHOW_RECEPTION_EVENT}
@@ -120,7 +130,53 @@ class SubmitRSVPPage(webapp2.RequestHandler):
 
             group_member.put()
 
+        deferred.defer(send_confirmation_email, group_name)
+
         self.response.out.write(success_response)
+
+def send_confirmation_email(group_name):
+    sender_address = 'admin@%s.appspotmail.com' % app_identity.get_application_id()
+    recepient_address = 'aditya.rathnam@gmail.com'
+    subject = 'Received RSVP from %s' % group_name
+    body = ''
+
+    group_members = db.GqlQuery('SELECT * FROM Guest WHERE group_name = :1 order by first_name, filled_out_name', group_name)
+
+    for group_member in group_members:
+        if group_member.filled_out_name is not None:
+           body += '%s: ' % group_member.filled_out_name
+        else:
+           body += '%s %s: ' % (group_member.first_name, group_member.last_name)
+        if group_member.garba == GuestState.ATTENDING:
+           body += 'Garba '
+        if group_member.ceremony == GuestState.ATTENDING:
+           body += 'Ceremony '
+        if group_member.reception == GuestState.ATTENDING:
+           body += 'Reception'
+        body += '\n'
+
+    mail.send_mail(sender_address, recepient_address, subject, body)
+
+class GetAllRSVPsPage(webapp2.RequestHandler):
+    def get(self):
+        self.response.headers.add_header('content-type', 'text/plain', charset='utf-8')
+        deferred.defer(send_full_rsvp_list_email)
+        self.response.out.write('Emails sent to the site admins!')
+
+def send_full_rsvp_list_email():
+    sender_address = 'admin@%s.appspotmail.com' % app_identity.get_application_id()
+    recepient_address = 'aditya.rathnam@gmail.com, jayodita@gmail.com'
+    subject = 'Full RSVP List from %s' % app_identity.get_application_id()
+    body = ''
+
+    group_members = db.GqlQuery('SELECT * FROM Guest order by group_name, first_name')
+
+    for group_member in group_members:
+        body += '%s,%s,%s,%s,%d,%d,%d\n' % (group_member.first_name, group_member.last_name, group_member.group_name, \
+                                            group_member.filled_out_name.strip(',') if group_member.filled_out_name is not None else '', \
+                                            group_member.garba, group_member.ceremony, group_member.reception)
+
+    mail.send_mail(sender_address, recepient_address, subject, body)
 
 application = webapp2.WSGIApplication([
     ('/', WelcomePage),
@@ -136,7 +192,8 @@ application = webapp2.WSGIApplication([
     ('/rsvp', RSVPPage),
     ('/filloutrsvp', FillOutRSVPPage),
     ('/submitrsvp', SubmitRSVPPage),
-    ('/thankyou', RSVPThankyouPage)
+    ('/thankyou', RSVPThankyouPage),
+    ('/getallrsvp', GetAllRSVPsPage),
 ], debug=True)
 
 JINJA_ENVIRONMENT = jinja2.Environment(
