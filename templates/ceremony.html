@@ -11,7 +11,9 @@
         <div id="event-container">
             <div id="img-container">
                 <div id="img-container-left">
-                    <a href="/garba"><img src="/img/left_arrow.png"/></a>
+                    {% if SHOW_GARBA_EVENT %}
+                        <a href="/garba"><img src="/img/left_arrow.png"/></a>
+                    {% endif %}
                 </div>
                 <div id="img-container-right">
                     <img class="img-container-image shadowed" src="/img/ceremony.jpg"/>
@@ -41,7 +43,9 @@
                     </table>
                 </div>
                 <div id="text-container-right">
-                    <a href="/reception"><img src="/img/right_arrow.png"/></a>
+                    {% if SHOW_RECEPTION_EVENT %}
+                        <a href="/reception"><img src="/img/right_arrow.png"/></a>
+                    {% endif %}
                 </div>
             </div>
         </div>

@@ -9,6 +9,13 @@ import webapp2
 from google.appengine.ext import db
 from models import Guest
 
+SHOW_GARBA_EVENT = 1
+SHOW_CEREMONY_EVENT = 1
+SHOW_RECEPTION_EVENT = 1
+event_template_values = {'SHOW_GARBA_EVENT' : SHOW_GARBA_EVENT,
+                         'SHOW_CEREMONY_EVENT' : SHOW_CEREMONY_EVENT,
+                         'SHOW_RECEPTION_EVENT' : SHOW_RECEPTION_EVENT}
+
 class WelcomePage(webapp2.RequestHandler):
     def get(self):
         self.response.write(JINJA_ENVIRONMENT.get_template('templates/welcome.html').render())
@@ -23,19 +30,19 @@ class StoryPage(webapp2.RequestHandler):
 
 class EventsPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write(JINJA_ENVIRONMENT.get_template('templates/events.html').render())
+        self.response.write(JINJA_ENVIRONMENT.get_template('templates/events.html').render(event_template_values))
 
 class GarbaPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write(JINJA_ENVIRONMENT.get_template('templates/garba.html').render())
+        self.response.write(JINJA_ENVIRONMENT.get_template('templates/garba.html').render(event_template_values))
 
 class CeremonyPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write(JINJA_ENVIRONMENT.get_template('templates/ceremony.html').render())
+        self.response.write(JINJA_ENVIRONMENT.get_template('templates/ceremony.html').render(event_template_values))
 
 class ReceptionPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write(JINJA_ENVIRONMENT.get_template('templates/reception.html').render())
+        self.response.write(JINJA_ENVIRONMENT.get_template('templates/reception.html').render(event_template_values))
         
 class GuestBookPage(webapp2.RequestHandler):
     def get(self):

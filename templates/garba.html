@@ -43,7 +43,11 @@
                     </table>
                 </div>
                 <div id="text-container-right">
-                    <a href="/ceremony"><img src="/img/right_arrow.png"/></a>
+                    {% if SHOW_CEREMONY_EVENT %}
+                        <a href="/ceremony"><img src="/img/right_arrow.png"/></a>
+                    {% elif SHOW_RECEPTION_EVENT %}
+                        <a href="/reception"><img src="/img/right_arrow.png"/></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
