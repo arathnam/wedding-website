@@ -37,8 +37,3 @@ function resize() {
     }
 }
 
-$(function() {
-    $('#main img').load(function() {
-        $(this).css('visibility', 'visible');
-    });
-});

@@ -121,7 +121,6 @@ html, body {
 }
 
 #main img {
-    visibility: hidden;
     max-width: 100%;
     height: auto;
 }
