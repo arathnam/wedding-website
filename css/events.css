@@ -1,15 +1,11 @@
-#container {
-    position: absolute;
-    top: 50%;
-    margin-top: -225px; /* Half of content height */
-    width: 100%;
-}
-
 #events-container {
-    width: 1000px;
-    height: 450px;
-    margin-left: auto;
-    margin-right: auto;
+   width: 990px;
+   height: 450px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -445px;
+   margin-top: -225px; /* HACK: Not quite half as the footer is 60px */
 }
 
 #img-container {
