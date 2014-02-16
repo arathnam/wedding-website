@@ -63,40 +63,34 @@ html, body {
 #footer-container {
     background-image: url('/img/background.jpg');
     bottom: 10px; /* To match page borders */
-    height: 40px;
-    position: fixed;
     width: 100%;
     z-index: 100;
-    padding-bottom: 15px;
-    text-align: center;
-    overflow-x: auto;
-}
-
-#footer {
+    padding-bottom: 10px;
     margin-left: 10px; /* To match page borders */
     margin-right: 10px; /* To match page borders */
-    line-height: 40px;
+    position: fixed;
+    text-align: center;
 }
 
-#footer nav {
+#footer-container nav {
     font-size: 18px;
 }
 
-#footer nav li {
+#footer-container nav li {
     display: inline;
     padding-right: 35px;
 }
 
-#footer nav li a {
+#footer-container nav li a {
     text-decoration: none;
     color: rgb(77, 77, 77);
 }
 
-#footer nav li a:hover {
+#footer-container nav li a:hover {
     text-decoration: underline;
 }
 
-#footer nav li.active a {
+#footer-container nav li.active a {
     text-decoration: underline;
 }
 

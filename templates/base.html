@@ -27,7 +27,6 @@
     </div>
 
     <div id="footer-container">
-        <div id="footer">
         {% set navigation_bar = [
             ('/home', 'home', 'Home'),
             ('/story', 'story', 'Story'),
@@ -36,14 +35,13 @@
             ('/photos', 'photos', 'Photos'),
             ('/guest_book', 'guest_book', 'Guest Book')
         ] -%}
-            <nav>
-                <ul>
-                    {% for href, id, caption in navigation_bar %}
-                        <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
-                    {% endfor %}
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                {% for href, id, caption in navigation_bar %}
+                    <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
     </div>
 </body>
 
