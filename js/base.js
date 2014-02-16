@@ -11,18 +11,6 @@ $(window).resize(function() {
 });
 
 function resize() {
-    if (($('#footer-container').is(':visible'))) {
-        $('#main').css({
-            left: ($(window).width() - $('#main').outerWidth())/2,
-            top: ($(window).height() - $('#main').outerHeight() - $('#footer-container').outerHeight())/2
-        });
-    } else {
-        $('#main').css({
-            left: ($(window).width() - $('#main').outerWidth())/2,
-            top: ($(window).height() - $('#main').outerHeight())/2
-        });
-    }
-
     // HACK: For the individual event pages.
     if ($('#event-container').length) {
         if ($('.shadowed').length) {
@@ -36,4 +24,3 @@ function resize() {
         }
     }
 }
-

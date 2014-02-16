@@ -3,12 +3,16 @@
 
 {% block page_title %} | Photos{% endblock %}
 
+{% block more_styles_and_js %}
+    <link rel="stylesheet" href="/css/photos.css">
+{% endblock %}
+
 {% block body %}
     <div id="loading-icon">
         <img src="/img/loading_icon.gif" alt="Loading..."/>
     </div>
 
-    <div id="main">
+    <div id="center">
         <script src="//www.gmodules.com/ig/ifr?url=http://hosting.gmodules.com/ig/gadgets/file/110671948006269597468/RSSMediaSlideshow.xml&amp;up_feedUrl=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fbase%2Fuser%2F109602350299166629381%2Falbumid%2F5948250320137000609%3Falt%3Drss%26kind%3Dphoto%26authkey%3DGv1sRgCNX-4eih1_TqIw%26hl%3Den_US&amp;up_displayTime=4&amp;up_transTime=1&amp;up_bgColor=transparent&amp;up_ord=Original&amp;up_nav=Small&amp;up_clk=1&amp;up_captionLink=0&amp;up_cap=0&amp;up_capColor=%23000000&amp;up_pauseHover=0&amp;synd=open&amp;w=800&amp;h=606&amp;title=&amp;border=none&amp;output=js"></script>         
     </div>
 {% endblock %}

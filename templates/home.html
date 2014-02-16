@@ -3,8 +3,12 @@
 
 {% block page_title %} | Home{% endblock %}
 
+{% block more_styles_and_js %}
+    <link rel="stylesheet" href="/css/home.css">
+{% endblock %}
+
 {% block body %}
-    <div id="main">
-        <img class="shadowed" src="img/home_page_photo.jpg"/>
+    <div id="center">
+        <img class="shadowed" width="799" height="571" src="img/home_page_photo.jpg"/>
     </div>
 {% endblock %}

@@ -112,19 +112,6 @@ html, body {
     color: #4D4D4D;
 }
 
-#main {
-    position: absolute;
-    display: inline-block;
-    width: 800px;
-    max-width: 100%;
-    text-align: center;
-}
-
-#main img {
-    max-width: 100%;
-    height: auto;
-}
-
 .shadowed {
     -webkit-box-shadow: 0 1px 15px rgba(0,0,0,0.6);
     -moz-box-shadow: 0 1px 15px rgba(0,0,0,0.6);
