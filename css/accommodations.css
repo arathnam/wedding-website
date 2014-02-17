@@ -1,11 +1,12 @@
 #accomodations-container {
-   width: 1000px;
-   height: 520px;
-   position: absolute;
-   left: 50%;
-   top: 50%;
-   margin-left: -500px;
-   margin-top: -260px;
+    width: 900px;
+    height: 520px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -450px;
+    margin-top: -260px;
+    font-weight: 600;
 }
 
 #top-img-container {
@@ -14,24 +15,19 @@
 
 #top-img-container img {
     height: 80px;
-    width: auto;
 }
 
 #accommodations-text {
-    font-weight: 600;
     text-align: left;
 }
 
 .left-accommodations-text1 {
     margin-left: 60px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
 }
 
 .left-accommodations-text2 {
     margin-left: 70px;
     margin-top: -10px;
-    padding-top: 0px;
 }
 
 .left-accommodations-text2 a {
@@ -46,13 +42,11 @@
 .left-column {
     width: 25%;
     vertical-align: top;
-    font-weight: 600;
 }
 
 .right-column {
     width: 75%;
     vertical-align: top;
-    font-weight: 600;
 }
 
 tr.padding-under > td {
@@ -62,15 +56,10 @@ tr.padding-under > td {
 #right-img-container {
     margin-top: -300px;
     margin-left: 60%;
-    text-align: left;
+    text-align: right;
+    line-height: 0.60em;
 }
 
 #right-img-container img {
     height: 300px;
-    width: auto;
-}
-
-.right-accommodations-text {
-    font-weight: 600;
-    line-height: 0.60em;
 }
