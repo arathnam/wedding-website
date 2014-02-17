@@ -1,5 +1,5 @@
 #events-container {
-   width: 990px;
+   width: 980px;
    height: 450px;
    position: absolute;
    left: 50%;
@@ -10,23 +10,16 @@
 
 #img-container {
     text-align: center;
-    font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
 }
 
 #img-container div {
     display: inline-block;
 }
 
-#img-container:after {
-    content: '';
-    width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
-    display: inline-block;
-}
-
 #img-container img {
     width: 300px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #events-text {
