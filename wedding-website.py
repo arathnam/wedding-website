@@ -145,7 +145,7 @@ class SubmitRSVPPage(webapp2.RequestHandler):
 
 def send_confirmation_email(group_name):
     sender_address = 'admin@%s.appspotmail.com' % app_identity.get_application_id()
-    recepient_address = 'aditya.rathnam@gmail.com'
+    recepient_address = 'aditya.rathnam@gmail.com,jayodita@gmail.com'
     subject = 'Received RSVP from %s' % group_name
     body = ''
 
