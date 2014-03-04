@@ -1,0 +1,9 @@
+#center {
+   width: 799px;
+   height: 571px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -400px;
+   margin-top: -300px; /* HACK: Not quite half as the footer is 60px */
+}

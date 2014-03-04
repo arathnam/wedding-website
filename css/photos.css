@@ -1,0 +1,9 @@
+#center {
+   width: 800px;
+   height: 600px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -400px;
+   margin-top: -310px; /* HACK: Not quite half */
+}
