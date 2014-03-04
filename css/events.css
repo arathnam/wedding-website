@@ -4,7 +4,7 @@
    position: absolute;
    left: 50%;
    top: 50%;
-   margin-left: -445px;
+   margin-left: -490px;
    margin-top: -225px; /* HACK: Not quite half as the footer is 60px */
 }
 

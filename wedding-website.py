@@ -40,7 +40,10 @@ class StoryPage(webapp2.RequestHandler):
 
 class EventsPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write(JINJA_ENVIRONMENT.get_template('templates/events.html').render(event_template_values))
+        if SHOW_RECEPTION_EVENT and not SHOW_CEREMONY_EVENT and not SHOW_GARBA_EVENT:
+            self.response.write(JINJA_ENVIRONMENT.get_template('templates/reception.html').render(event_template_values))
+        else:
+            self.response.write(JINJA_ENVIRONMENT.get_template('templates/events.html').render(event_template_values))
 
 class GarbaPage(webapp2.RequestHandler):
     def get(self):
@@ -69,6 +72,9 @@ class PhotosPage(webapp2.RequestHandler):
 class RSVPPage(webapp2.RequestHandler):
     def get(self):
         template_values = {'fill_out_rsvp_page_path' : '/filloutrsvp'}
+        failure_reason = cgi.escape(self.request.get('failure_reason')) if self.request.get('failure_reason') else None
+        if failure_reason:
+            template_values['error_message'] = 'Sorry, that\'s not a valid login'
         self.response.write(JINJA_ENVIRONMENT.get_template('templates/rsvp.html').render(template_values))
         
 class RSVPThankyouPage(webapp2.RequestHandler):
@@ -83,15 +89,18 @@ class FillOutRSVPPage(webapp2.RequestHandler):
         group_name = cgi.escape(self.request.get('group_name'))
         group_name = group_name.lower()
         group_members = db.GqlQuery("SELECT * FROM Guest WHERE group_name = :1 order by first_name", group_name)
-        template_values = {'submit_rsvp_page_path' : '/submitrsvp',
-                           'thank_you_page_path' : '/thankyou',
-                           'group_name' : group_name,
-                           'group_members' : group_members,
-                           'STATE_NOT_INVITED' : GuestState.NOT_INVITED,
-                           'STATE_INVITED' : GuestState.INVITED,
-                           'STATE_NOT_ATTENDING' : GuestState.NOT_ATTENDING,
-                           'STATE_ATTENDING' : GuestState.ATTENDING}
-        self.response.write(JINJA_ENVIRONMENT.get_template('templates/fillout_rsvp.html').render(template_values)) 
+        if group_members.count() > 0:
+            template_values = {'submit_rsvp_page_path' : '/submitrsvp',
+                               'thank_you_page_path' : '/thankyou',
+                               'group_name' : group_name,
+                               'group_members' : group_members,
+                               'STATE_NOT_INVITED' : GuestState.NOT_INVITED,
+                               'STATE_INVITED' : GuestState.INVITED,
+                               'STATE_NOT_ATTENDING' : GuestState.NOT_ATTENDING,
+                               'STATE_ATTENDING' : GuestState.ATTENDING}
+            self.response.write(JINJA_ENVIRONMENT.get_template('templates/fillout_rsvp.html').render(template_values))
+        else:
+            self.redirect('/rsvp?failure_reason=invalid_login')
 
 class SubmitRSVPPage(webapp2.RequestHandler):
     def post(self):
