@@ -183,9 +183,9 @@ Shah,Ranai,gaurang,1,1,1
 Makwana,Kiran,meena,1,1,1
 Makwana,Meena,meena,1,1,1
 Makwana,Saransh,meena,1,1,1
--,-,mitesh,1,1,1
--,-,mitesh,1,1,1
--,-,mitesh,1,1,1
+Mehta,Mitesh,mitesh,1,1,1
+Shah,Hetal,mitesh,1,1,1
+Mehta,Zara,mitesh,1,1,1
 Shah,Nidhi,nidhi,1,1,1
 Shah,Nimesh,nidhi,1,1,1
 Sheth,Avani,avani,1,1,1
@@ -198,6 +198,8 @@ Sanghvi,Krupal,krupal,1,1,1
 Sanghvi,Nishith,krupal,1,1,1
 Sanghvi,Shaina,krupal,1,1,1
 Sanghvi,Reyan,krupal,1,1,1
+Vora,Bharti,krupal,1,1,1
+Vora,Surendra,krupal,1,1,1
 Nandu,Viren,viren,1,1,1
 Nandu,Neepa,viren,1,1,1
 Nandu,Simi,viren,1,1,1
@@ -321,7 +323,7 @@ Sharma,Shirish,sharma,1,1,1
 Sharma,Shreya,sharma,1,1,1
 Godhwani,Deepak,godhwani,0,0,1
 Godhwani,Neelam,godhwani,0,0,1
-Shrivastava,Ritu,poonam,0,0,1
+Shrivastava,Rituparna,poonam,0,0,1
 Shrivastava,Poonam,poonam,0,0,1
 Patel,Dipak,dipak,1,1,1
 Patel,Lopa,dipak,1,1,1
@@ -351,8 +353,10 @@ Doctor,Saurabh,Doctor,1,1,1
 Doctor,Hemina,Doctor,1,1,1
 Doctor,Rahil,Doctor,1,1,1
 Doctor,Rhea,Doctor,1,1,1
-Sajja,Vijay,Sajja,0,0,1
-Sajja,Raji,Sajja,0,0,1
+-,-,Sajja,0,1,1
+-,-,Sajja,0,1,1
+-,-,Sajja,0,1,1
+-,-,Sajja,0,1,1
 Nandu,Sanjay,sanjay,1,1,1
 Nandu,Prachi,sanjay,1,1,1
 Nandu,Pranav,sanjay,1,1,1
