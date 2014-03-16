@@ -84,6 +84,17 @@ class RSVPThankyouPage(webapp2.RequestHandler):
 class GuestState:
     NOT_INVITED, INVITED, NOT_ATTENDING, ATTENDING = range(4)
 
+    @staticmethod
+    def get_guest_state_str(guest_state):
+        if guest_state == GuestState.NOT_INVITED:
+            return 'not_invited'
+        elif guest_state == GuestState.INVITED:
+            return 'invited'
+        elif guest_state == GuestState.NOT_ATTENDING:
+            return 'not_attending'
+        elif guest_state == GuestState.ATTENDING:
+            return 'attending'
+
 class FillOutRSVPPage(webapp2.RequestHandler):
     def post(self):
         group_name = cgi.escape(self.request.get('group_name'))
@@ -156,13 +167,10 @@ def send_confirmation_email(group_name):
            body += '%s: ' % group_member.filled_out_name
         else:
            body += '%s %s: ' % (group_member.first_name, group_member.last_name)
-        if group_member.garba == GuestState.ATTENDING:
-           body += 'Garba '
-        if group_member.ceremony == GuestState.ATTENDING:
-           body += 'Ceremony '
-        if group_member.reception == GuestState.ATTENDING:
-           body += 'Reception'
-        body += '\n'
+
+	body += GuestState.get_guest_state_str(group_member.garba) + ' '
+        body += GuestState.get_guest_state_str(group_member.ceremony) + ' '
+        body += GuestState.get_guest_state_str(group_member.reception) + '\n'
 
     mail.send_mail(sender_address, recepient_address, subject, body)
 
