@@ -53,6 +53,10 @@ class CeremonyPage(webapp2.RequestHandler):
     def get(self):
         self.response.write(JINJA_ENVIRONMENT.get_template('templates/ceremony.html').render(event_template_values))
 
+class CeremonyRitesPage(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(JINJA_ENVIRONMENT.get_template('templates/ceremonyrites.html').render(event_template_values))
+
 class ReceptionPage(webapp2.RequestHandler):
     def get(self):
         self.response.write(JINJA_ENVIRONMENT.get_template('templates/reception.html').render(event_template_values))
@@ -202,6 +206,7 @@ application = webapp2.WSGIApplication([
     ('/events', EventsPage),
     ('/garba', GarbaPage),
     ('/ceremony', CeremonyPage),
+    ('/ceremonyrites', CeremonyRitesPage),
     ('/reception', ReceptionPage),
     ('/guest_book', GuestBookPage),
     ('/photos', PhotosPage),

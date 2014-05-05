@@ -1,0 +1,20 @@
+#container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#rites-text {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#top-img-container {
+    margin-top: 40px;
+    text-align: left;
+}
+
+#top-img-container img {
+    height: 175px;
+    width: auto;
+}

@@ -98,3 +98,13 @@
 tr.padding-under > td {
     padding-bottom: 0.6em;
 }
+
+#ceremony-rites-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.ceremony-link {
+    font-weight: bold;
+    font-size: 20px;
+}
